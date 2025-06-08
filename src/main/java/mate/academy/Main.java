@@ -19,7 +19,7 @@ public class Main {
         try {
             user = authenticationService.login("bob", "1234");
         } catch (AuthenticationException e) {
-            logger.warn("Username or password are incorrect", e);
+            logger.warn("Failed login attempt for user: bob", e);
             return;
         }
         OrderService orderService = new OrderServiceImpl();
